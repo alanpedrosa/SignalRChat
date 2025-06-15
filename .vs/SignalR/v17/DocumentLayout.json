@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\source\\repos\\SignalR\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5B058F4C-922F-4621-B186-8211684D8EB2}|SignalR.csproj|g:\\source\\repos\\signalr\\wwwroot\\js\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{5B058F4C-922F-4621-B186-8211684D8EB2}|SignalR.csproj|solutionrelative:wwwroot\\js\\home.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B058F4C-922F-4621-B186-8211684D8EB2}|SignalR.csproj|g:\\source\\repos\\signalr\\wwwroot\\css\\stylechat.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{5B058F4C-922F-4621-B186-8211684D8EB2}|SignalR.csproj|solutionrelative:wwwroot\\css\\stylechat.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B058F4C-922F-4621-B186-8211684D8EB2}|SignalR.csproj|g:\\source\\repos\\signalr\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5B058F4C-922F-4621-B186-8211684D8EB2}|SignalR.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B058F4C-922F-4621-B186-8211684D8EB2}|SignalR.csproj|g:\\source\\repos\\signalr\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B058F4C-922F-4621-B186-8211684D8EB2}|SignalR.csproj|solutionrelative:controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "stylechat.css",
+              "DocumentMoniker": "G:\\source\\repos\\SignalR\\wwwroot\\css\\stylechat.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\stylechat.css",
+              "ToolTip": "G:\\source\\repos\\SignalR\\wwwroot\\css\\stylechat.css",
+              "RelativeToolTip": "wwwroot\\css\\stylechat.css",
+              "ViewState": "AQIAALkAAAAAAAAAAAAuwOcBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-06-15T17:12:11.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "G:\\source\\repos\\SignalR\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "G:\\source\\repos\\SignalR\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIgAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-14T23:01:56.6Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "home.js",
+              "DocumentMoniker": "G:\\source\\repos\\SignalR\\wwwroot\\js\\home.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\home.js",
+              "ToolTip": "G:\\source\\repos\\SignalR\\wwwroot\\js\\home.js",
+              "RelativeToolTip": "wwwroot\\js\\home.js",
+              "ViewState": "AQIAAPkBAAAAAAAAAAAAAAQCAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-14T23:02:13.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "G:\\source\\repos\\SignalR\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AdminController.cs",
+              "ToolTip": "G:\\source\\repos\\SignalR\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "Controllers\\AdminController.cs",
+              "ViewState": "AQIAACYAAAAAAAAAAAAIwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-14T22:13:50.559Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

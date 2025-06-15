@@ -1,0 +1,53 @@
+﻿@model IEnumerable<SignalR.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Usuários";
+}
+
+<h2>Usuários Cadastrados</h2>
+
+<a asp-action="Create" class="btn btn-primary mb-3">➕ Novo Usuário</a>
+<a asp-controller="Admin" asp-action="Index" class="btn btn-primary mb-3">🏠 Tela Inicial</a>
+
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Nome</th>
+            <th>UIN</th>
+            <th>Sala</th>
+            <th>Admin</th>
+            <th>Online</th>
+            <th>Data Entrada</th>
+            <th>Data Alteração</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var usuario in Model)
+        {
+            <tr>
+                <td>@usuario.Nome</td>
+                <td>@usuario.UIN</td>
+                <td>@usuario.Sala?.Nome</td>
+                <td>@(usuario.Adm ? "Sim" : "Não")</td>
+                <td>@(usuario.EstaOnline ? "🟢" : "🔴")</td>
+                <td>@usuario.DataEntrada.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>
+                    @if (usuario.DataAlteracao != null)
+                    {
+                        @usuario.DataAlteracao?.ToString("dd/MM/yyyy HH:mm")
+                    }
+                    else
+                    {
+                        <span>---</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@usuario.Id" class="btn btn-sm btn-warning">✏️ Editar</a>
+                    <a asp-action="Delete" asp-route-id="@usuario.Id" class="btn btn-sm btn-danger" onclick="return confirm('Deseja excluir este usuário?')">🗑 Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

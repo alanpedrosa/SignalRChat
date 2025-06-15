@@ -1,0 +1,23 @@
+﻿@model SignalR.Models.Usuario
+
+@{
+    ViewData["Title"] = "Excluir Usuário";
+}
+
+<h2>Excluir Usuário</h2>
+
+<h4>Tem certeza que deseja excluir este usuário?</h4>
+<hr />
+
+<div class="alert alert-warning">
+    <strong>Nome:</strong> @Model.Nome<br />
+    <strong>UIN:</strong> @Model.UIN<br />
+    <strong>Sala:</strong> @Model.Sala?.Nome<br />
+    <strong>Administrador:</strong> @(Model.Adm ? "Sim" : "Não")
+</div>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Confirmar Exclusão</button>
+    <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+</form>

@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="container mt-5" style="max-width: 400px;">
+    <h3 class="text-center mb-4">🔐 Login</h3>
+
+    @if (ViewBag.Erro != null)
+    {
+        <div class="alert alert-danger">@ViewBag.Erro</div>
+    }
+
+    <form method="post">
+        <div class="mb-3">
+            <label for="nome" class="form-label">Nome de usuário</label>
+            <input type="text" class="form-control" id="nome" name="nome" required />
+        </div>
+        <div class="mb-3">
+            <label for="senha" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="senha" name="senha" required />
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Entrar</button>
+    </form>
+</div>

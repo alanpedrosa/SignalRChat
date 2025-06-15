@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Painel do Administrador";
+}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-4">
+    <h2 class="mb-4">👨‍💼 Painel do Administrador</h2>
+
+  
+    <a asp-controller="Home" asp-action="Index" class="btn btn-info mb-3">💬 Tela do Chat</a>
+
+    <div class="row g-3">
+        <div class="col-md-4">
+            <div class="card border-primary">
+                <div class="card-body text-center">
+                    <h5 class="card-title">👥 Gerenciar Usuários</h5>
+                    <p class="card-text">Crie, edite ou remova usuários do sistema.</p>
+                    <a href="@Url.Action("Index", "Usuarios")" class="btn btn-outline-primary">Acessar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-success">
+                <div class="card-body text-center">
+                    <h5 class="card-title">🏷️ Gerenciar Salas</h5>
+                    <p class="card-text">Visualize e organize as salas do chat.</p>
+                    <a href="@Url.Action("Index", "Salas")" class="btn btn-outline-success">Acessar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-dark">
+                <div class="card-body text-center">
+                    <h5 class="card-title">📊 Relatórios</h5>
+                    <p class="card-text">Ver usuários online, UINs ativos e estatísticas.</p>
+                    <a href="#" class="btn btn-outline-dark disabled">Em breve</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

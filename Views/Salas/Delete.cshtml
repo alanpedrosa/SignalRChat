@@ -1,0 +1,20 @@
+﻿@model SignalR.Models.Sala
+
+@{
+    ViewData["Title"] = "Excluir Sala";
+}
+
+<h2>Excluir Sala</h2>
+
+<h4>Tem certeza que deseja excluir esta sala?</h4>
+<hr />
+
+<div class="alert alert-warning">
+    <strong>Nome:</strong> @Model.Nome
+</div>
+
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">🗑 Confirmar Exclusão</button>
+    <a asp-action="Index" class="btn btn-secondary">↩️ Cancelar</a>
+</form>

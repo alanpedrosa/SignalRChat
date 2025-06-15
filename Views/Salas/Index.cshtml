@@ -1,0 +1,31 @@
+﻿@model IEnumerable<SignalR.Models.Sala>
+
+@{
+    ViewData["Title"] = "Salas";
+}
+
+<h2>Salas Cadastradas</h2>
+
+<a asp-action="Create" class="btn btn-primary mb-3">➕ Nova Sala</a>
+<a asp-controller="Admin" asp-action="Index" class="btn btn-primary mb-3">🏠 Tela Inicial</a>
+
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Nome</th>
+            <th>Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sala in Model)
+        {
+            <tr>
+                <td>@sala.Nome</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@sala.Id" class="btn btn-sm btn-warning">✏️ Editar</a>
+                    <a asp-action="Delete" asp-route-id="@sala.Id" class="btn btn-sm btn-danger" onclick="return confirm('Deseja excluir esta sala?')">🗑 Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

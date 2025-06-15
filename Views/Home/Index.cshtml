@@ -1,0 +1,148 @@
+﻿@{
+    ViewData["Title"] = "PedrosaChat";
+}
+
+
+<audio id="notificacaoAudio" src="/sounds/oh-oh-icq-sound.mp3" preload="auto"></audio>
+<audio id="somAtencao" src="/sounds/AirHorn.mp3" preload="auto"></audio>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="~/css/stylechat.css" rel="stylesheet" />
+
+<div class="parent mt-4">
+    <!-- Lista de participantes -->
+    <div class="div1 card">
+        <div class="card-header bg-primary text-white text-center">Participantes</div>
+        <ul class="list-group list-group-flush" id="usersList" style="height: 100%; overflow-y: auto;"></ul>
+    </div>
+
+    <!-- Área de mensagens -->
+    <div class="div2 card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            Chat <small class="text-muted">| <span id="userInfo"></span></small>
+        </div>
+        <div class="card-body" style="overflow-y: auto;">
+            <div id="userSection">
+                <label>Digite seu nome:</label>
+                <input type="text" id="userInput" class="form-control mb-2" placeholder="Seu nome" />
+                <label>Escolha uma sala:</label>
+                <select id="salaInput" class="form-select mb-2">
+                    <option value="">Selecione uma sala...</option>
+                    @foreach (var sala in ViewBag.Salas)
+                    {
+                        <option value="@sala.Nome">@sala.Nome</option>
+                    }
+                </select>
+                <button class="btn btn-primary" onclick="setUser()">Entrar</button>
+            </div>
+            <div id="chatSection">
+                <ul class="list-group" id="messagesList" style="max-height: 100%; overflow-y: auto;"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra de envio -->
+    <div class="div3" id="barraEnvio">
+        <div class="input-group align-items-end">
+            <div class="me-2">
+                <label for="destinatarioInput" class="form-label">Enviar para:</label>
+                <select id="destinatarioInput" class="form-select">
+                    <option value="Todos" selected>Todos</option>
+                </select>
+            </div>
+            <input type="text" id="messageInput" class="form-control" placeholder="Digite sua mensagem..." />
+            <button class="btn btn-success" onclick="sendMessage()">
+                <img src="/icons/enviarmsg.png" alt="Enviar" width="20" />
+            </button>
+
+            <label for="fileInput" class="btn btn-outline-secondary ms-2" title="Anexar arquivo" id="fileLabel">
+                <img src="/icons/carregar.png" alt="Anexar" width="20" />
+            </label>
+            <input type="file" id="fileInput" multiple hidden>          
+        
+
+            <button class="btn btn-warning ms-2" id="btnAtencao" onclick="chamarAtencao()" style="display: none;">
+                🔔 Chamar Atenção
+            </button>
+
+        </div>
+    </div>
+
+    <!-- Botões laterais -->
+
+    <div class="div4 d-flex flex-column gap-2" id="botoesSection">
+
+
+        <button class="btn btn-outline-dark btn-sm w-100" onclick="window.location='/Admin'">
+            <img src="/icons/engrenagem.png" alt="Admin" width="20" /> Admin
+        </button>
+        <button id="btnModoIa" class="btn btn-sm btn-outline-primary" onclick="alternarIa()">🤖 IA Desativada</button>
+
+        <button id="btnResumoIa" class="btn btn-outline-success">📄 Resumo</button>
+        <button class="btn btn-outline-secondary btn-sm w-100" onclick="toggleSom()" id="btnSom">
+            <img id="iconSom" src="/icons/comsom.png" alt="Som" width="20" />
+        </button>
+        <button class="btn btn-outline-danger btn-sm w-100" onclick="sairDoChat()" id="btnSair">
+            <img src="/icons/sair.png" alt="Sair" width="20" />
+        </button>
+        <button class="btn btn-outline-dark btn-sm w-100" onclick="toggleDarkMode()" id="btnDark">
+            <img id="iconTema" src="/icons/escuro.png" alt="Tema" width="20" />
+        </button>
+    </div>
+</div>
+<!-- Modal Lightbox -->
+<div class="modal fade" id="lightboxModal" tabindex="-1" aria-labelledby="lightboxLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-content bg-dark">
+            <div class="modal-header border-0">
+                <h5 class="modal-title" id="lightboxLabel"></h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="lightboxImage" src="" alt="Imagem" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal IA -->
+<div class="modal fade" id="iaModal" tabindex="-1" aria-labelledby="iaModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title" id="iaModalLabel">Resposta da IA</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+            </div>
+            <div class="modal-body">
+                <div id="iaResposta" class="p-2">Carregando...</div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-primary btn-sm" onclick="copiarIa()">
+                    Copiar Resposta
+                </button>
+                <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">
+                    Fechar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<footer class="footer text-center py-2 border-top bg-light dark-mode-footer">
+    <div class="container">
+        <small class="text-muted">
+            Sistema de Chat com SignalR - <strong>v1.0</strong><br />
+            Ícones por <a href="https://www.flaticon.com/br/" target="_blank">Flaticon</a>
+        </small>
+    </div>
+</footer>
+
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/7.0.5/signalr.min.js"></script>
+    <script src="~/js/home.js"></script>
+}
+
+
+
