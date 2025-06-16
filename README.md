@@ -1,141 +1,77 @@
 
-# PedrosaChat - SignalR
+# SignalRchat
 
-![GitHub repo size](https://img.shields.io/github/repo-size/seuusuario/PedrosaChat)
-![GitHub contributors](https://img.shields.io/github/contributors/seuusuario/PedrosaChat)
-![GitHub last commit](https://img.shields.io/github/last-commit/seuusuario/PedrosaChat)
-![GitHub license](https://img.shields.io/github/license/seuusuario/PedrosaChat)
+Sistema de chat em tempo real desenvolvido em ASP.NET, SignalR e JavaScript.
 
----
+## Funcionalidades
 
-## 💬 Sobre o Projeto
-
-**PedrosaChat** é um sistema de chat em tempo real desenvolvido em **ASP.NET Core com SignalR**, integrando também funcionalidades de **Inteligência Artificial (IA)** via OpenRouter.
-
-> ⚠️ **Status:** Projeto em desenvolvimento contínuo.
-
----
-
-## 🚀 Funcionalidades
-
-- Chat em tempo real com SignalR
-- Salas dinâmicas e persistentes no banco de dados
-- Lista de participantes online/offline
-- Envio de mensagens públicas e privadas
-- Upload de arquivos e imagens
+- Envio de mensagens em tempo real
+- Upload e download de arquivos (imagens, documentos)
 - Visualização de imagens em Lightbox
-- Integração com IA (OpenRouter):
-  - Geração de respostas
-  - Resumo de conversas
-  - Perguntas baseadas na seleção de texto
-- Notificações sonoras e alertas de atenção
-- Tema Claro e Escuro
-- Layout responsivo para Desktop e Mobile
+- Notificações sonoras para mensagens
+- Botão de chamada de atenção
+- Participantes online/offline
+- Modo escuro e modo claro
+- Integração com IA (OpenRouter) para resumos e consultas rápidas
+- Gerenciamento de usuários e salas
+- Modal de resposta da IA
+- Suporte a anexos com múltiplos arquivos
 
----
+## Tecnologias utilizadas
 
-## 🏗️ Estrutura do Projeto
-
-```
-SignalR/
-├── Controllers
-├── Data
-├── Hubs
-├── Interfaces
-├── Models
-├── Repositories
-├── Services
-├── Views
-├── wwwroot
-│   ├── css
-│   ├── js
-│   └── sounds
-├── appsettings.json
-└── Program.cs
-```
-
----
-
-## 🧠 Tecnologias Utilizadas
-
-- .NET 8
-- ASP.NET Core MVC
+- ASP.NET Core (.NET 8)
 - SignalR
 - Entity Framework Core
 - SQL Server
 - Bootstrap 5
-- JavaScript (ES6)
-- OpenRouter API (IA)
+- JavaScript (puro)
+- OpenRouter API (Integração IA)
 
----
+## Como rodar o projeto localmente
 
-## 💻 Como Executar Localmente
-
-### Pré-requisitos:
-
-- Visual Studio 2022 ou superior
-- .NET SDK 8
-- SQL Server
-
-### Passos:
-
-1. Clone o repositório:
+1. Clone este repositório:
 
 ```bash
-git clone https://github.com/seuusuario/PedrosaChat.git
-cd PedrosaChat
+git clone https://github.com/seu-usuario/SignalRchat.git
 ```
 
-2. Configure o `appsettings.json`:
+2. Abra o projeto no **Visual Studio 2022**.
+
+3. Configure o banco de dados no arquivo `appsettings.json`:
 
 ```json
-{
-  "ConnectionStrings": {
-    "DefaultConnection": "Server=SEU_SERVIDOR;Database=SignalR;Trusted_Connection=True;MultipleActiveResultSets=true"
-  },
-  "OpenRouter": {
-    "ApiKey": "SUA_API_KEY_OPENROUTER",
-    "BaseUrl": "https://openrouter.ai/api/v1",
-    "Model": "mistralai/mistral-7b"
-  }
+"ConnectionStrings": {
+  "DefaultConnection": "Server=SEU_SERVIDOR;Database=SignalRDb;Trusted_Connection=True;TrustServerCertificate=True;"
+},
+"OpenRouter": {
+  "ApiKey": "SUA_API_KEY",
+  "BaseUrl": "https://openrouter.ai/api/v1/chat/completions",
+  "Model": "mistralai/mixtral-8x7b"
 }
 ```
 
-3. Crie o banco de dados:
+4. Execute as migrações via Package Manager ou com `update-database`.
 
-```bash
-dotnet ef database update
-```
+5. Clique em **Start** no Visual Studio.
 
-4. Execute o projeto:
+6. Acesse:  
+`https://localhost:{porta}`
 
-```bash
-dotnet run
-```
+## Status
 
-Acesse o sistema via:
+> Este projeto ainda está em desenvolvimento. Novas funcionalidades estão sendo planejadas e implementadas.
 
-```
-https://localhost:7233
-```
+## Contribuições
 
----
+Contribuições são bem-vindas! Fique à vontade para abrir Issues ou Pull Requests.
 
-## 📃 Licença
+## Licença
 
-Distribuído sob a licença [MIT](LICENSE).
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](./LICENSE) para mais informações.
 
----
+## Links úteis
 
-## 🚧 Aviso
-
-Este projeto está em desenvolvimento. Algumas funcionalidades podem ser alteradas, melhoradas ou adicionadas futuramente.
-
----
-
-## ✨ Autor
-
-**Alan Pedrosa**  
-[LinkedIn](https://www.linkedin.com) | [GitHub](https://github.com/seuusuario)
-
----
+- [Documentação do SignalR](https://learn.microsoft.com/aspnet/core/signalr/introduction)
+- [Documentação ASP.NET](https://learn.microsoft.com/aspnet/core/)
+- [OpenRouter API](https://openrouter.ai/docs)
+- [Bootstrap](https://getbootstrap.com/)
