@@ -23,6 +23,9 @@ builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<ISalaRepository, SalaRepository>();
 builder.Services.AddScoped<ICriptografiaService, CriptografiaService>();
 
+builder.Services.AddScoped<IaService>();
+
+
 
 var app = builder.Build();
 

@@ -293,6 +293,14 @@
       "PackagePath": "staticwebassets\\sounds\\oh-oh-icq-sound.mp3"
     },
     {
+      "Id": "G:\\source\\repos\\SignalR\\wwwroot\\uploads\\10f11978-2b82-497e-b0b6-44fb9823425f.JPG",
+      "PackagePath": "staticwebassets\\uploads\\10f11978-2b82-497e-b0b6-44fb9823425f.JPG"
+    },
+    {
+      "Id": "G:\\source\\repos\\SignalR\\wwwroot\\uploads\\b7fe48a1-03ab-4db3-94c0-634889b79411.JPG",
+      "PackagePath": "staticwebassets\\uploads\\b7fe48a1-03ab-4db3-94c0-634889b79411.JPG"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SignalR.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

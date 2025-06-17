@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "llE6Jf/wNLwoMIiylOEfeRQ2C7K4baLUViJTbxKs6i4=",
+  "Hash": "T24tvjl+g++yKGQqEnsltNYJB19hOvcHIHF74/pZy68=",
   "Source": "SignalR",
   "BasePath": "_content/SignalR",
   "Mode": "Default",
@@ -1421,6 +1421,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\sounds\\oh-oh-icq-sound.mp3"
+    },
+    {
+      "Identity": "G:\\source\\repos\\SignalR\\wwwroot\\uploads\\10f11978-2b82-497e-b0b6-44fb9823425f.JPG",
+      "SourceId": "SignalR",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\source\\repos\\SignalR\\wwwroot\\",
+      "BasePath": "_content/SignalR",
+      "RelativePath": "uploads/10f11978-2b82-497e-b0b6-44fb9823425f.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\10f11978-2b82-497e-b0b6-44fb9823425f.JPG"
+    },
+    {
+      "Identity": "G:\\source\\repos\\SignalR\\wwwroot\\uploads\\b7fe48a1-03ab-4db3-94c0-634889b79411.JPG",
+      "SourceId": "SignalR",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\source\\repos\\SignalR\\wwwroot\\",
+      "BasePath": "_content/SignalR",
+      "RelativePath": "uploads/b7fe48a1-03ab-4db3-94c0-634889b79411.JPG",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\b7fe48a1-03ab-4db3-94c0-634889b79411.JPG"
     }
   ]
 }

@@ -87,12 +87,6 @@ namespace SignalR.Controllers
         public async Task<IActionResult> AlterarSenha(AlterarSenhaViewModel model)
         {
 
-            Console.WriteLine("============== DEBUG ==============");
-            Console.WriteLine($"UsuarioId recebido: {model.UsuarioId}");
-            Console.WriteLine($"SenhaAtual: {model.SenhaAtual}");
-            Console.WriteLine($"NovaSenha: {model.NovaSenha}");
-            Console.WriteLine($"ConfirmarNovaSenha: {model.ConfirmarNovaSenha}");
-            Console.WriteLine("====================================");
 
             if (!ModelState.IsValid)
                 return View(model);

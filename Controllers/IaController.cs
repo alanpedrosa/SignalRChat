@@ -1,71 +1,62 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Configuration;
-using System.Net.Http;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
+using SignalR.Services;
 
 namespace SignalR.Controllers
 {
-    [ApiController]
     [Route("api/ia")]
+    [ApiController]
     public class IaController : ControllerBase
     {
-        private readonly IConfiguration _config;
-        private readonly HttpClient _http;
+        private readonly IaService _iaService;
 
-        public IaController(IConfiguration config, IHttpClientFactory httpClientFactory)
+        public IaController(IaService iaService)
         {
-            _config = config;
-            _http = httpClientFactory.CreateClient();
+            _iaService = iaService;
         }
 
         [HttpPost("comando")]
-        public async Task<IActionResult> Comando([FromBody] JsonElement body)
+        public async Task<IActionResult> Comando([FromBody] ComandoRequest request)
         {
-            var comando = body.GetProperty("comando").GetString();
-            var resposta = await ConsultarIaAsync(comando);
-            return Ok(new { resposta });
+            if (string.IsNullOrWhiteSpace(request.Comando))
+                return BadRequest(new { erro = "O comando não pode ser vazio." });
+
+            try
+            {
+                var resposta = await _iaService.ConsultarIa(request.Comando);
+                return Ok(new { resposta });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { erro = ex.Message });
+            }
         }
 
         [HttpPost("resumo")]
-        public async Task<IActionResult> Resumo([FromBody] JsonElement body)
+        public async Task<IActionResult> Resumo([FromBody] ResumoRequest request)
         {
-            var conversa = body.GetProperty("conversa").GetString();
-            var prompt = $"Faça um resumo desta conversa de chat:\n{conversa}";
-            var resumo = await ConsultarIaAsync(prompt);
-            return Ok(new { resumo });
-        }
+            if (string.IsNullOrWhiteSpace(request.Conversa))
+                return BadRequest(new { erro = "A conversa não pode ser vazia." });
 
-        private async Task<string> ConsultarIaAsync(string prompt)
-        {
-            var apiKey = _config["OpenRouter:ApiKey"];
-            var baseUrl = _config["OpenRouter:BaseUrl"];
-            var model = _config["OpenRouter:Model"];
-            var payload = new
+            try
             {
-                model = model,
-                messages = new[]
-                {
-                    new { role = "user", content = prompt }
-                }
-            };
-
-            var content = new StringContent(JsonSerializer.Serialize(payload), Encoding.UTF8, "application/json");
-            _http.DefaultRequestHeaders.Clear();
-            _http.DefaultRequestHeaders.Add("Authorization", $"Bearer {apiKey}");
-
-            var response = await _http.PostAsync($"{baseUrl}/v1/chat/completions", content);
-            response.EnsureSuccessStatusCode();
-
-            var json = await response.Content.ReadAsStringAsync();
-            using var doc = JsonDocument.Parse(json);
-
-            return doc.RootElement
-                .GetProperty("choices")[0]
-                .GetProperty("message")
-                .GetProperty("content")
-                .GetString();
+                var prompt = $"Faça um resumo detalhado desta conversa de chat:\n\n{request.Conversa}";
+                var resumo = await _iaService.ConsultarIa(prompt);
+                return Ok(new { resumo });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { erro = ex.Message });
+            }
         }
+    }
+
+    public class ComandoRequest
+    {
+        public string Comando { get; set; }
+    }
+
+    public class ResumoRequest
+    {
+        public string Conversa { get; set; }
     }
 }
