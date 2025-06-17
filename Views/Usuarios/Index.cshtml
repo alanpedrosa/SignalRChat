@@ -9,7 +9,6 @@
 <a asp-action="Create" class="btn btn-primary mb-3">➕ Novo Usuário</a>
 <a asp-controller="Admin" asp-action="Index" class="btn btn-primary mb-3">🏠 Tela Inicial</a>
 
-
 <table class="table table-bordered table-striped">
     <thead class="table-dark">
         <tr>
@@ -45,6 +44,10 @@
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@usuario.Id" class="btn btn-sm btn-warning">✏️ Editar</a>
+                    <a asp-action="AlterarSenha" asp-route-id="@usuario.Id" class="btn btn-sm btn-secondary">
+                        🔑 Alterar Senha
+                    </a>
+
                     <a asp-action="Delete" asp-route-id="@usuario.Id" class="btn btn-sm btn-danger" onclick="return confirm('Deseja excluir este usuário?')">🗑 Excluir</a>
                 </td>
             </tr>

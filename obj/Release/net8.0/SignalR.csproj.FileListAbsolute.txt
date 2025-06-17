@@ -8,6 +8,8 @@ G:\source\repos\SignalR\bin\Release\net8.0\SignalR.dll
 G:\source\repos\SignalR\bin\Release\net8.0\SignalR.pdb
 G:\source\repos\SignalR\bin\Release\net8.0\Azure.Core.dll
 G:\source\repos\SignalR\bin\Release\net8.0\Azure.Identity.dll
+G:\source\repos\SignalR\bin\Release\net8.0\DevOne.Security.Cryptography.BCrypt.dll
+G:\source\repos\SignalR\bin\Release\net8.0\BCrypt.Net-Next.dll
 G:\source\repos\SignalR\bin\Release\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 G:\source\repos\SignalR\bin\Release\net8.0\Microsoft.Data.SqlClient.dll
 G:\source\repos\SignalR\bin\Release\net8.0\Microsoft.EntityFrameworkCore.dll
@@ -68,6 +70,7 @@ G:\source\repos\SignalR\obj\Release\net8.0\SignalR.csproj.CoreCompileInputs.cach
 G:\source\repos\SignalR\obj\Release\net8.0\SignalR.MvcApplicationPartsAssemblyInfo.cache
 G:\source\repos\SignalR\obj\Release\net8.0\SignalR.RazorAssemblyInfo.cache
 G:\source\repos\SignalR\obj\Release\net8.0\SignalR.RazorAssemblyInfo.cs
+G:\source\repos\SignalR\obj\Release\net8.0\SignalR.sourcelink.json
 G:\source\repos\SignalR\obj\Release\net8.0\staticwebassets.build.json
 G:\source\repos\SignalR\obj\Release\net8.0\staticwebassets.development.json
 G:\source\repos\SignalR\obj\Release\net8.0\staticwebassets\msbuild.SignalR.Microsoft.AspNetCore.StaticWebAssets.props

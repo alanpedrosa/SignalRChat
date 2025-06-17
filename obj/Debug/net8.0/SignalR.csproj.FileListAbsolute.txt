@@ -84,3 +84,6 @@ G:\source\repos\SignalR\obj\Debug\net8.0\refint\SignalR.dll
 G:\source\repos\SignalR\obj\Debug\net8.0\SignalR.pdb
 G:\source\repos\SignalR\obj\Debug\net8.0\SignalR.genruntimeconfig.cache
 G:\source\repos\SignalR\obj\Debug\net8.0\ref\SignalR.dll
+G:\source\repos\SignalR\bin\Debug\net8.0\DevOne.Security.Cryptography.BCrypt.dll
+G:\source\repos\SignalR\bin\Debug\net8.0\BCrypt.Net-Next.dll
+G:\source\repos\SignalR\obj\Debug\net8.0\SignalR.sourcelink.json

@@ -12,8 +12,6 @@ namespace SignalR.Controllers
             _usuarioRepository = usuarioRepository;
         }
 
-
-
         public async Task<IActionResult> Index()
         {
             var uinStr = HttpContext.Session.GetString("UIN");

@@ -9,9 +9,10 @@ namespace SignalR.Models
         [Required(ErrorMessage = "O nome é obrigatório.")]
         public string Nome { get; set; }
 
+        [DataType(DataType.Password)]
         [Required(ErrorMessage = "A senha é obrigatória.")]
-        public string Senha { get; set; }
-
+        public string Senha { get; set; }     
+               
         [Required(ErrorMessage = "O UIN é obrigatório.")]
         public long UIN { get; set; }
 

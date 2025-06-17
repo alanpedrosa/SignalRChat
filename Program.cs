@@ -1,9 +1,9 @@
-
 using Microsoft.EntityFrameworkCore;
 using SignalR.Data;
 using SignalR.Interfaces;
 using SignalR.Models;
 using SignalR.Repositories;
+using SignalR.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +21,8 @@ builder.Services.AddHttpClient();
 
 builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
 builder.Services.AddScoped<ISalaRepository, SalaRepository>();
+builder.Services.AddScoped<ICriptografiaService, CriptografiaService>();
+
 
 var app = builder.Build();
 

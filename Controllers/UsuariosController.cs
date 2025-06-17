@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using SignalR.Interfaces;
 using SignalR.Models;
+using SignalR.Services;
+using SignalR.ViewModels;
 
 namespace SignalR.Controllers
 {
@@ -9,11 +11,13 @@ namespace SignalR.Controllers
     {
         private readonly IUsuarioRepository _usuarioRepository;
         private readonly ISalaRepository _salaRepository;
+        private readonly ICriptografiaService _criptografiaService;
 
-        public UsuariosController(IUsuarioRepository usuarioRepository, ISalaRepository salaRepository)
+        public UsuariosController(IUsuarioRepository usuarioRepository, ISalaRepository salaRepository, ICriptografiaService criptografiaService)
         {
             _usuarioRepository = usuarioRepository;
             _salaRepository = salaRepository;
+            _criptografiaService = criptografiaService;
         }
 
         public async Task<IActionResult> Index()
@@ -47,6 +51,9 @@ namespace SignalR.Controllers
 
             if (ModelState.IsValid)
             {
+                // 🔐 Criptografia da senha
+                usuario.Senha = _criptografiaService.GerarHash(usuario.Senha);
+
                 await _usuarioRepository.AdicionarAsync(usuario);
                 return RedirectToAction(nameof(Index));
             }
@@ -56,6 +63,62 @@ namespace SignalR.Controllers
 
             return View(usuario);
         }
+
+        [HttpGet]
+        public async Task<IActionResult> AlterarSenha(Guid id)
+        {
+            var usuario = await _usuarioRepository.ObterPorIdAsync(id);
+
+            if (usuario == null)
+                return NotFound();
+
+            var model = new AlterarSenhaViewModel
+            {
+                UsuarioId = usuario.Id,
+                NomeUsuario = usuario.Nome
+            };
+
+            return View(model);
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AlterarSenha(AlterarSenhaViewModel model)
+        {
+
+            Console.WriteLine("============== DEBUG ==============");
+            Console.WriteLine($"UsuarioId recebido: {model.UsuarioId}");
+            Console.WriteLine($"SenhaAtual: {model.SenhaAtual}");
+            Console.WriteLine($"NovaSenha: {model.NovaSenha}");
+            Console.WriteLine($"ConfirmarNovaSenha: {model.ConfirmarNovaSenha}");
+            Console.WriteLine("====================================");
+
+            if (!ModelState.IsValid)
+                return View(model);
+
+            var usuario = await _usuarioRepository.ObterPorIdAsync(model.UsuarioId);
+
+            if (usuario == null)
+                return NotFound();
+
+            if (!_criptografiaService.VerificarSenha(model.SenhaAtual, usuario.Senha))
+            {
+                ModelState.AddModelError("SenhaAtual", "Senha atual incorreta.");
+                return View(model);
+            }
+
+            usuario.Senha = _criptografiaService.GerarHash(model.NovaSenha);
+            usuario.DataAlteracao = DateTime.Now;
+
+            await _usuarioRepository.AtualizarAsync(usuario);
+
+            TempData["Mensagem"] = "Senha alterada com sucesso!";
+
+            return RedirectToAction(nameof(Index));
+        }
+
+
 
         public async Task<IActionResult> Edit(Guid? id)
         {
@@ -83,6 +146,12 @@ namespace SignalR.Controllers
 
             if (usuario.Sala == null)
                 ModelState.AddModelError("SalaId", "Selecione uma sala válida.");
+
+            if (!string.IsNullOrEmpty(usuario.Senha))
+            {
+                usuario.Senha = _criptografiaService.GerarHash(usuario.Senha);
+            }
+
 
             if (ModelState.IsValid)
             {
@@ -128,7 +197,8 @@ namespace SignalR.Controllers
                 await _usuarioRepository.RemoverAsync(usuario);
             }
             return RedirectToAction(nameof(Index));
-        }
+        }           
+
     }
 }
 

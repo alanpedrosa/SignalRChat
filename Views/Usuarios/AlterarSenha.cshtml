@@ -1,0 +1,40 @@
+﻿@model SignalR.ViewModels.AlterarSenhaViewModel
+
+@{
+    ViewData["Title"] = "Alterar Senha";
+}
+
+<h2>🔑 Alterar senha do usuário: <strong>@Model.NomeUsuario</strong></h2>
+
+<form asp-action="AlterarSenha" method="post">
+    <input type="hidden" asp-for="UsuarioId" />
+    <input type="hidden" asp-for="NomeUsuario" />
+
+
+    <div class="mb-3">
+        <label asp-for="SenhaAtual" class="form-label"></label>
+        <input asp-for="SenhaAtual" class="form-control" type="password" />
+        <span asp-validation-for="SenhaAtual" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="NovaSenha" class="form-label"></label>
+        <input asp-for="NovaSenha" class="form-control" type="password" />
+        <span asp-validation-for="NovaSenha" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ConfirmarNovaSenha" class="form-label"></label>
+        <input asp-for="ConfirmarNovaSenha" class="form-control" type="password" />
+        <span asp-validation-for="ConfirmarNovaSenha" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success mb-3">💾 Alterar Senha</button>
+    <a asp-action="Index" class="btn btn-secondary mb-3">↩️ Voltar</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

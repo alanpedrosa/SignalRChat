@@ -53,8 +53,8 @@
       "PackagePath": "staticwebassets\\icons\\semsom.png"
     },
     {
-      "Id": "G:\\source\\repos\\SignalR\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
+      "Id": "G:\\source\\repos\\SignalR\\wwwroot\\js\\home.js",
+      "PackagePath": "staticwebassets\\js\\home.js"
     },
     {
       "Id": "G:\\source\\repos\\SignalR\\wwwroot\\lib\\bootstrap\\LICENSE",
@@ -291,50 +291,6 @@
     {
       "Id": "G:\\source\\repos\\SignalR\\wwwroot\\sounds\\oh-oh-icq-sound.mp3",
       "PackagePath": "staticwebassets\\sounds\\oh-oh-icq-sound.mp3"
-    },
-    {
-      "Id": "G:\\source\\repos\\SignalR\\wwwroot\\uploads\\1fa5ab65-a494-40e9-8b1c-908e8fd38fa9.JPG",
-      "PackagePath": "staticwebassets\\uploads\\1fa5ab65-a494-40e9-8b1c-908e8fd38fa9.JPG"
-    },
-    {
-      "Id": "G:\\source\\repos\\SignalR\\wwwroot\\uploads\\319d94d9-0cc0-4ab1-ae60-da2a5070c38f.JPG",
-      "PackagePath": "staticwebassets\\uploads\\319d94d9-0cc0-4ab1-ae60-da2a5070c38f.JPG"
-    },
-    {
-      "Id": "G:\\source\\repos\\SignalR\\wwwroot\\uploads\\3cdf1007-e9af-463d-bc6d-c3fdb1a985fc.pdf",
-      "PackagePath": "staticwebassets\\uploads\\3cdf1007-e9af-463d-bc6d-c3fdb1a985fc.pdf"
-    },
-    {
-      "Id": "G:\\source\\repos\\SignalR\\wwwroot\\uploads\\67ce2c47-fabf-4813-ab6d-d6aaf68c1f76.pdf",
-      "PackagePath": "staticwebassets\\uploads\\67ce2c47-fabf-4813-ab6d-d6aaf68c1f76.pdf"
-    },
-    {
-      "Id": "G:\\source\\repos\\SignalR\\wwwroot\\uploads\\7d5dd0a6-952e-4183-996e-32de3ac2de18.JPG",
-      "PackagePath": "staticwebassets\\uploads\\7d5dd0a6-952e-4183-996e-32de3ac2de18.JPG"
-    },
-    {
-      "Id": "G:\\source\\repos\\SignalR\\wwwroot\\uploads\\8346e188-25bc-4a7f-9ff3-b80ce789e6a9.txt",
-      "PackagePath": "staticwebassets\\uploads\\8346e188-25bc-4a7f-9ff3-b80ce789e6a9.txt"
-    },
-    {
-      "Id": "G:\\source\\repos\\SignalR\\wwwroot\\uploads\\991867b3-d867-4a00-a616-213e26691c02.JPG",
-      "PackagePath": "staticwebassets\\uploads\\991867b3-d867-4a00-a616-213e26691c02.JPG"
-    },
-    {
-      "Id": "G:\\source\\repos\\SignalR\\wwwroot\\uploads\\afa8ea89-152c-4a29-9903-15fa7914d621.JPG",
-      "PackagePath": "staticwebassets\\uploads\\afa8ea89-152c-4a29-9903-15fa7914d621.JPG"
-    },
-    {
-      "Id": "G:\\source\\repos\\SignalR\\wwwroot\\uploads\\bbfba622-3648-4650-96cd-9a1b5e5a4d3a.pdf",
-      "PackagePath": "staticwebassets\\uploads\\bbfba622-3648-4650-96cd-9a1b5e5a4d3a.pdf"
-    },
-    {
-      "Id": "G:\\source\\repos\\SignalR\\wwwroot\\uploads\\d42091dd-4353-4502-a7f1-873fdc9d2986.JPG",
-      "PackagePath": "staticwebassets\\uploads\\d42091dd-4353-4502-a7f1-873fdc9d2986.JPG"
-    },
-    {
-      "Id": "G:\\source\\repos\\SignalR\\wwwroot\\uploads\\d9578741-2175-4591-a781-2502ae6b8d27.pdf",
-      "PackagePath": "staticwebassets\\uploads\\d9578741-2175-4591-a781-2502ae6b8d27.pdf"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SignalR.Microsoft.AspNetCore.StaticWebAssets.props",
