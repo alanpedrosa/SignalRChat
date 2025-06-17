@@ -22,7 +22,7 @@ ScaffoldingReadMe.txt
 *.log
 
 appsettings.Development.json
-appsettings.Local.json
+appsettings.json
 
 node_modules/
 
