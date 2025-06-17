@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "G:\\source\\repos\\SignalR\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5B058F4C-922F-4621-B186-8211684D8EB2}|SignalR.csproj|g:\\source\\repos\\signalr\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5B058F4C-922F-4621-B186-8211684D8EB2}|SignalR.csproj|solutionrelative:repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5B058F4C-922F-4621-B186-8211684D8EB2}|SignalR.csproj|g:\\source\\repos\\signalr\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
+      "RelativeMoniker": "D:0:0:{5B058F4C-922F-4621-B186-8211684D8EB2}|SignalR.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B058F4C-922F-4621-B186-8211684D8EB2}|SignalR.csproj|g:\\source\\repos\\signalr\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5B058F4C-922F-4621-B186-8211684D8EB2}|SignalR.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5B058F4C-922F-4621-B186-8211684D8EB2}|SignalR.csproj|g:\\source\\repos\\signalr\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5B058F4C-922F-4621-B186-8211684D8EB2}|SignalR.csproj|solutionrelative:repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5B058F4C-922F-4621-B186-8211684D8EB2}|SignalR.csproj|g:\\source\\repos\\signalr\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
@@ -41,8 +45,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "README.md",
+              "DocumentMoniker": "G:\\source\\repos\\SignalR\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "G:\\source\\repos\\SignalR\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AQIAAF8AAAAAAAAAAAAYwHoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-06-17T15:47:48.618Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -62,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "UsuarioRepository.cs",
               "DocumentMoniker": "G:\\source\\repos\\SignalR\\Repositories\\UsuarioRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\UsuarioRepository.cs",
@@ -75,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "AlterarSenha.cshtml",
               "DocumentMoniker": "G:\\source\\repos\\SignalR\\Views\\Usuarios\\AlterarSenha.cshtml",
               "RelativeDocumentMoniker": "Views\\Usuarios\\AlterarSenha.cshtml",
@@ -83,12 +100,11 @@
               "RelativeToolTip": "Views\\Usuarios\\AlterarSenha.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-17T04:37:04.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-17T04:37:04.922Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
               "DocumentMoniker": "G:\\source\\repos\\SignalR\\Views\\Usuarios\\Index.cshtml",
               "RelativeDocumentMoniker": "Views\\Usuarios\\Index.cshtml",
@@ -96,12 +112,11 @@
               "RelativeToolTip": "Views\\Usuarios\\Index.cshtml",
               "ViewState": "AQIAACcAAAAAAAAAAAAAAC4AAABrAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-06-17T04:36:27.555Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-17T04:36:27.555Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AlterarSenhaViewModel.cs",
               "DocumentMoniker": "G:\\source\\repos\\SignalR\\ViewModels\\AlterarSenhaViewModel.cs",
               "RelativeDocumentMoniker": "ViewModels\\AlterarSenhaViewModel.cs",
@@ -109,12 +124,11 @@
               "RelativeToolTip": "ViewModels\\AlterarSenhaViewModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T04:48:45.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-17T04:48:45.431Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "UsuariosController.cs",
               "DocumentMoniker": "G:\\source\\repos\\SignalR\\Controllers\\UsuariosController.cs",
               "RelativeDocumentMoniker": "Controllers\\UsuariosController.cs",
@@ -122,22 +136,20 @@
               "RelativeToolTip": "Controllers\\UsuariosController.cs",
               "ViewState": "AQIAAEsAAAAAAAAAAAAEwFcAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T04:35:37.235Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "dbo.Usuarios [Dados]",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/SignalRDB/True/SqlTable/dbo.Usuarios.sql",
-              "ToolTip": "dbo.Usuarios [Dados]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-06-17T03:06:56.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-17T04:35:37.235Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "dbo.Usuarios [Dados]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/SignalRDB/True/SqlTable/dbo.Usuarios.sql",
+              "ToolTip": "dbo.Usuarios [Dados]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-06-17T03:06:56.037Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "appsettings.json",
               "DocumentMoniker": "G:\\source\\repos\\SignalR\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -145,8 +157,7 @@
               "RelativeToolTip": "appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAwAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-17T04:24:36.04Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-17T04:24:36.04Z"
             }
           ]
         }
