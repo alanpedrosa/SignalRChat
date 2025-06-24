@@ -30,7 +30,10 @@ Sistema de chat em tempo real desenvolvido em **ASP.NET**, **SignalR** e **JavaS
 - ✅ Modal para respostas da IA.
 - ✅ Suporte a anexos com múltiplos arquivos.
 - ✅ 🔐 **Criptografia de senhas com BCrypt**.
+- ✅ Recuperação de senha por e-mail.
 - ✅ Controle de usuários online e suas sessões (em dev).
+- ✅ Login Google (em dev).
+ 
 
 ---
 
@@ -45,6 +48,7 @@ Sistema de chat em tempo real desenvolvido em **ASP.NET**, **SignalR** e **JavaS
 - JavaScript (puro)
 - OpenRouter API (Integração IA)
 - **BCrypt.Net** (para criptografia de senhas)
+- OAuth 2.0 e OpenID Connect (Login Google)
 
 ---
 
@@ -60,14 +64,32 @@ git clone https://github.com/seu-usuario/SignalRchat.git
 
 3. Configure a string de conexão e a chave da IA no arquivo `appsettings.json`:
 
-```json
-"ConnectionStrings": {
-  "DefaultConnection": "Server=SEU_SERVIDOR;Database=SignalRDb;Trusted_Connection=True;TrustServerCertificate=True;"
-},
-"OpenRouter": {
-  "ApiKey": "SUA_API_KEY",
-  "BaseUrl": "https://openrouter.ai/api",
-  "Model": "mistralai/mixtral-8x7b"
+```{
+  "ConnectionStrings": {
+    //Producao
+    //"SignalRConnection": "Data Source=SUA_BASE;Initial Catalog=SEU_CATALOG;User Id=SEU_ID;Password=SUA_SENHA"
+    //Homolog  
+    "SignalRConnection": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=SEU_CATALOG;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False"
+
+  },
+  "OpenRouter": {
+    "ApiKey": "SUA_API_KEY",
+    "BaseUrl": "https://openrouter.ai",
+    "Model": "SEU_MODELO"
+  },
+  "Smtp": {
+    "Servidor": "smtp.gmail.com",
+    "Porta": 587,
+    "Usuario": "SEU_EMAIL",
+    "Senha": "SUA_SENHA",
+    "UsaSSL": true
+  },
+  "Authentication": {
+    "Google": {
+      "ClientId": "SEU_CLIENT_ID",
+      "ClientSecret": "SUA_SECRET_KEY"
+    }
+  }
 }
 ```
 
